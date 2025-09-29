@@ -12,7 +12,7 @@ import BarbershopItem from "./_components/barbershop-item";
 export default async function Home() {
   const barbershops = await db.barbershop.findMany();
 
-  // ✅ TESTE IMPORTANTE
+ 
   console.log("Barbearias:", barbershops);
 
   const barbershopsInv = await db.barbershop.findMany({

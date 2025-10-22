@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Barbershop } from "@/generated/prisma";
+import Link from "next/link";
 import { StarIcon } from "lucide-react";
 
 interface BarbershopItemProps {
@@ -26,7 +27,12 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
         <div className="flex flex-col items-center gap-2">
           <p className="truncate text-xl font-bold">{barbershop.name}</p>
           <p className="truncate font-semibold">{barbershop.address}</p>
+
+          <Link href={`/barbershop/${barbershop.id}'`}>
+        
           <Button variant={"outline"}>Reservar</Button>
+          </Link>
+         
         </div>
       </CardContent>
     </Card>

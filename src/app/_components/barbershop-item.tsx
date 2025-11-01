@@ -24,15 +24,16 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
             <span className="text-xs font-semibold">5.0</span>
           </Badge>
         </div>
+
         <div className="flex flex-col items-center gap-2">
           <p className="truncate text-xl font-bold">{barbershop.name}</p>
           <p className="truncate font-semibold">{barbershop.address}</p>
 
-          <Link href={`/barbershop/${barbershop.id}'`}>
-        
-          <Button variant={"outline"}>Reservar</Button>
+          <Link href={`/barbershop/${barbershop.id}`}>
+            <Button variant="outline" type="button">
+              Reservar
+            </Button>
           </Link>
-         
         </div>
       </CardContent>
     </Card>
